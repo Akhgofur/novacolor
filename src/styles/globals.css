@@ -39,3 +39,13 @@ img {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+.product-card-content {
+  transform: rotateX(96deg);
+  transition: all 0.5s ease;
+  
+}
+.product-card:hover .product-card-content {
+  transform: rotateX(0deg);
+
+}

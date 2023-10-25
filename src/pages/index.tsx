@@ -1,5 +1,6 @@
 
 import Layout from '@/layout'
+import HomeInner from '@/widgets'
 
 const Home = () => {
   
@@ -7,7 +8,7 @@ const Home = () => {
   
   return (
    <Layout>
-      
+      <HomeInner />
    </Layout>
   )
 }

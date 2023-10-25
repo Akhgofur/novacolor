@@ -35,7 +35,9 @@ module.exports = {
         
       },
       colors: {
-        "mainBlack" : "#313131"
+        mainBlack : "#313131",
+        mainBrown : "#d9a95b",
+        subheadColor: "#84827d"
       },
     },
     fontFamily: {

@@ -1,3 +1,6 @@
+import { INews, IProduct } from "@/contents/news-section"
+import { INavItem } from "./types"
+
 const languages = [
     {
         id: 1,
@@ -13,4 +16,128 @@ const languages = [
     },
 ]
 
-export {languages}
+const statsData = [
+    {
+        id: 1,
+        number: 2016,
+        name: "stats-1"
+    },
+    {
+        id: 2,
+        number: 2000,
+        name: "stats-2"
+    },
+    {
+        id: 3,
+        number: 1000,
+        name: "stats-3"
+    },
+    {
+        id: 4,
+        number: 5000,
+        name: "stats-4"
+    },
+]
+
+const newsData: INews[] = [
+    {
+        id: 1,
+        date: "25 Декабря 2022",
+        description: "lorem",
+        image: "/img/news/news-1.jpg",
+        name: "Miku"
+    },
+    {
+        id: 2,
+        date: "25 Декабря 2022",
+        description: "lorem",
+        image: "/img/news/news-2.jpg",
+        name: "Mirror"
+    },
+    {
+        id: 3,
+        date: "25 Декабря 2022",
+        description: "lorem",
+        image: "/img/news/news-3.jpg",
+        name: "Teodorico"
+    },
+    {
+        id: 4,
+        date: "25 Декабря 2022",
+        description: "lorem",
+        image: "/img/news/news-4.jpg",
+        name: "Archi pietra"
+    },
+    {
+        id: 5,
+        date: "25 Декабря 2022",
+        description: "lorem",
+        image: "/img/news/news-5.jpg",
+        name: "Florenzia"
+    }
+]
+
+
+const productsData: IProduct[] = [
+    {
+        id: 1,
+        description: "",
+        image: "/img/products/product-1.jpg",
+        name: "gallery"
+    },
+    {
+        id: 2,
+        description: "MATmotion Supreme Мatt Матовая краска на водной основе для внутренних … ",
+        image: "/img/products/product-2.jpg",
+        name: "Matmotion "
+    },
+    {
+        id: 3,
+        description: "IRONic Покрытие с эффектом ржавчины для внутренних и наружных работ … ",
+        image: "/img/products/product-3.jpg",
+        name: "Ironic "
+    },
+    {
+        id: 4,
+        description: "Verderame_Wall Painting Декоративное покрытие с эффектом оксидированной меди Декоративное покрытие … ",
+        image: "/img/products/product-4.jpg",
+        name: "Verderame "
+    },
+    {
+        id: 5,
+        description: "ZEUS Декоративное покрытие с эффектом «металлической фольги» для интерьеров. Зевс … ",
+        image: "/img/products/product-5.jpg",
+        name: "Zeus"
+    },
+]
+
+
+const navData: INavItem[] = [
+    {
+      id: 1,
+      name: "main",
+      url: "/",
+    },
+    {
+      id: 2,
+      name: "products",
+      url: "/products",
+    },
+    {
+      id: 3,
+      name: "about",
+      url: "/about",
+    },
+    {
+      id: 4,
+      name: "news",
+      url: "/news",
+    },
+    {
+      id: 5,
+      name: "contact",
+      url: "/contact",
+    },
+  ];
+
+export {languages, statsData, newsData, productsData, navData}
