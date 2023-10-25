@@ -10,7 +10,7 @@ const Footer = () => {
   return (
     <footer className="py-[30px] md:py-[60px] bg-mainBlack text-white">
       <Container>
-        <div className="grid grid-cols-1  text-center sm:text-start sm:place-items-start sm:grid-cols-2 md:grid-cols-4 gap-8 sm:gap-4 justify-between">
+        <div className="grid grid-cols-1  text-center sm:text-start  sm:grid-cols-2 md:grid-cols-4 gap-8 sm:gap-4 justify-between">
           <div className="flex flex-col items-center sm:items-start">
             <Link href={"/"} className="block">
               <img
