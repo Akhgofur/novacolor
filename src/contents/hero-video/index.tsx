@@ -9,7 +9,7 @@ const HeroVideo: FC = () => {
 
   return (
     <section className="w-full relative">
-      <div className="">
+      <div style={{backgroundImage: "url(/img/hero-bg.png)"}} className="bg-cover bg-center">
         <video
           src="/video/hero-video.mp4"
           className="object-cover w-full h-[60vh] smd:h-screen"
