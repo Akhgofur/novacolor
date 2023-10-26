@@ -9,7 +9,7 @@ const ProductCard: FC<{data: IProduct, className ?: string}> = ({data, className
     const {t} = useTranslation()
 
     return (
-        <div style={{perspective: "1000px"}} className={`product-card w-full h-[400px] rounded-lg  overflow-hidden relative group ${className}`}>
+        <div style={{perspective: "1000px"}} className={`product-card w-full  rounded-lg  overflow-hidden relative group ${className}`}>
             <div  className="z-[2] w-full max-w-0 group-hover:max-w-full h-full absolute top-0 left-[50%] translate-x-[-50%] transition-all duration-500 bg-gradient-to-b from-transparent to-mainBrown"></div>
             <Image src={data.image} alt={data.name} width={500} height={400} className="absolute z-[1] w-full h-full top-0 left-0 object-cover"></Image>
             <div className="product-card-content absolute z-[3] bottom-0 left-0  w-full py-5 opacity-0 group-hover:opacity-100">
