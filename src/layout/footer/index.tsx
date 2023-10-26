@@ -1,6 +1,6 @@
 import Container from "@/components/container";
 import Input from "@/components/input";
-import { navData, productsData } from "@/utils/consts";
+import { navData, productsData, socialLinks } from "@/utils/consts";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
 
@@ -19,7 +19,16 @@ const Footer = () => {
                 className="w-[150px] h-[70px] object-contain"
               />
             </Link>
-            <p className="text-sm font-medum">{t("footer-text")}</p>
+            <p className="text-sm font-medum mb-4">{t("footer-text")}</p>
+            <div className="flex items-center gap-3">
+                  {
+                    socialLinks.map(item => (
+                      <Link href={item.url} target="_blank" key={item.id} className="flex items-center justify-center w-[35px] h-[35px] rounded-full bg-[#f6f2eb]">
+                        <img src={item.image} alt="" className="w-[50%] h-[50%] object-contain" />
+                      </Link>
+                    ))
+                  }
+                </div>
           </div>
           <div className="flex flex-col items-center sm:items-start">
             <p className="mb-3 pb-1 border-b-mainBrown border-b-2 w-fit font-semibold">
