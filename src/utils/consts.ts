@@ -140,4 +140,44 @@ const navData: INavItem[] = [
     },
   ];
 
-export {languages, statsData, newsData, productsData, navData}
+  const mainInfo = [
+    {
+        id: 1,
+        name: "phone",
+        image: "/img/phone.png",
+        value: "998998934461",
+        url: "tel:998998934461"
+
+    },
+    {
+        id: 2,
+        name: "Email",
+        image: "/img/mail.png",
+        value: "info@gmail.com",
+        url: "mailto:info@gmail.com"
+
+    },
+    {
+        id: 3,
+        name: "address",
+        image: "/img/location.png",
+        value: "Yunusobod Tashkent",
+        url: "#"
+
+    },
+  ] 
+
+  const socialLinks = [
+    {
+        id: 1,
+        image: "/img/telegram.png",
+        url: "https://t.me/novacolor_uz"
+    },
+    {
+        id: 2,
+        image: "/img/instagram.png",
+        url: "https://www.instagram.com/novacolor_uz/"
+    },
+  ]
+
+export {languages, statsData, newsData, productsData, navData, mainInfo, socialLinks}

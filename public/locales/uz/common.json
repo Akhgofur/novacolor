@@ -24,12 +24,15 @@
     "stats-4" : "Ranglar",
     "all-products" : "Barcha produktlar",
     "details" : "Batafsil",
+    "clients-heading" : "Bizning mijozlar",
     "footer-text" : "Novacolor 1982-yil Italiya ning Forli shahrida tug'ilgan.",
     "links" : "Foydali linklar",
     "gallery" : "Obyektlar galereyasi",
     "name" : "Ism",
     "phone" : "Telefon",
-    "send" : "Yuborish"
+    "send" : "Yuborish",
+    "address" : "Manzil",
+    "projects" : "Loyihalar"
 
 
 }
