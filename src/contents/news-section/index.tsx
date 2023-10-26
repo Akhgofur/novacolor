@@ -76,7 +76,7 @@ const SliderSection: FC<SliderSectionProps> = ({
                 ))
               : products?.map((el) => (
                   <SwiperSlide className="py-5" key={el.id}>
-                    <ProductCard className="w-[400px]" data={el} key={el.id} />
+                    <ProductCard className="h-[400px]" data={el} key={el.id} />
                   </SwiperSlide>
                 ))}
           </Swiper>
