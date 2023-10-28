@@ -1,18 +1,21 @@
 import Loading from "@/components/loading";
-// import  from "@/layout";
-// import  from "@/widgets/news";
-import { Suspense, lazy } from "react";
-
-const NewsInner = lazy(() => import("@/widgets/news"))
-const  Layout = lazy(() => import("@/layout"))
+import Layout from "@/layout";
+import NewsInner from "@/widgets/news";
+import { useState, useEffect } from "react";
 
 const News = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => setLoading(false), 3000);
+  }, []);
   return (
-    <Suspense fallback={<Loading />}>
+    <>
+      {loading && <Loading />}
       <Layout>
         <NewsInner />
       </Layout>
-    </Suspense>
+    </>
   );
 };
 

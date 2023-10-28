@@ -1,22 +1,30 @@
-import Loading from "@/components/loading";
-// import Layout from '../layout'
-// import HomeInner from '../widgets'
-import { Suspense, useEffect, useState, lazy } from "react";
-import dynamic from "next/dynamic";
 
-const HomeInner = lazy(() => import("@/widgets"));
-const Layout = lazy(() => import("@/layout"));
+import Loading from '@/components/loading'
+import Layout from '../layout'
+import HomeInner from '../widgets'
+import { useEffect, useState } from 'react'
+
 
 const Home = () => {
-  return (
-    <>
-      <Suspense fallback={<Loading />}>
-        <Layout>
-          <HomeInner />
-        </Layout>
-      </Suspense>
-    </>
-  );
-};
 
-export default Home;
+
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    setTimeout(() => setLoading(false), 3000)
+  }, [])
+  
+  
+  return (
+   
+    <>
+    {loading && <Loading />}
+    <Layout>
+      <HomeInner />
+   </Layout>
+    </>
+  )
+}
+
+
+export default Home
