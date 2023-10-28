@@ -1,11 +1,11 @@
 import Loading from "@/components/loading";
 // import Layout from '../layout'
 // import HomeInner from '../widgets'
-import { Suspense, useEffect, useState } from "react";
+import { Suspense, useEffect, useState, lazy } from "react";
 import dynamic from "next/dynamic";
 
-const HomeInner = dynamic(() => import("@/widgets"), { ssr: false });
-const Layout = dynamic(() => import("@/layout"), { ssr: false });
+const HomeInner = lazy(() => import("@/widgets"));
+const Layout = lazy(() => import("@/layout"));
 
 const Home = () => {
   return (

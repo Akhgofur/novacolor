@@ -1,11 +1,10 @@
 import Loading from "@/components/loading";
 // import  from "@/layout";
 // import  from "@/widgets/news";
-import { Suspense } from "react";
-import dynamic from "next/dynamic";
+import { Suspense, lazy } from "react";
 
-const NewsInner = dynamic(() => import("@/widgets/news"))
-const  Layout = dynamic(() => import("@/layout"))
+const NewsInner = lazy(() => import("@/widgets/news"))
+const  Layout = lazy(() => import("@/layout"))
 
 const News = () => {
   return (
