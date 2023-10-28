@@ -12,8 +12,8 @@ const NotFound = () => {
 
   return (
     <Layout>
-      <div className="absolute top-[50%] left-0 w-full text-center text-[40px] font-semibold">
-        404 Page Not Found
+      <div className="h-full flex items-center justify-center">
+        <p className="text-[40px] font-semibold text-center">404 Page Not Found</p>
       </div>
     </Layout>
   );
