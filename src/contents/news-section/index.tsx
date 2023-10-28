@@ -8,9 +8,10 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
-import { FC } from "react";
+import { FC, useState } from "react";
 import NewsCard from "@/components/news-card";
 import ProductCard from "@/components/product-card";
+import NewsModal from "@/components/news-modal";
 
 export interface INews {
   date: string;
@@ -40,9 +41,15 @@ const SliderSection: FC<SliderSectionProps> = ({
   heading,
   products,
 }) => {
+
+  
+  const [currentNews, setCurrentNews] = useState(null)
+  const [open, setOpen] = useState(false)
+
   return (
     <section className="py-[40px] md:py-[70px]">
       <Container>
+        <NewsModal news={currentNews} setNews={setCurrentNews} open={open} setOpen={setOpen} />
         <Heading className="text-center mb-4">{heading}</Heading>
         <div className="">
           <Swiper
@@ -71,7 +78,7 @@ const SliderSection: FC<SliderSectionProps> = ({
             {type == "news"
               ? news?.map((el) => (
                   <SwiperSlide className="py-5" key={el.id}>
-                    <NewsCard data={el} key={el.id} />
+                    <NewsCard setOpen={setOpen} setNews={setCurrentNews} data={el} key={el.id} />
                   </SwiperSlide>
                 ))
               : products?.map((el) => (

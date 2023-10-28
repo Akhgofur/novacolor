@@ -42,9 +42,7 @@ const Header: FC = () => {
     <header>
       <MobileNav isShow={isShow} setShow={setShow} />
       <div
-        className={`${
-          sticky ? "md:hidden" : "block"
-        } w-full md:absolute z-[20] top-0 left-0`}
+        className={` w-full `}
       >
         <div className="top bg-[#313131] py-3 md:py-6">
           <Container>
