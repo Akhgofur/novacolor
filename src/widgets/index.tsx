@@ -21,8 +21,8 @@ const HomeInner = () => {
         <CategoriesSection />
         <Stats />
         <SliderSection heading={t("news")} type="news" news={newsData} />
-        <SliderSection heading={t("all-products")} type="products" products={mainProducts} />
-        <ProjectsSection heading={t("projects")} products={mainProducts} />
+        <SliderSection heading={t("all-products")} type="products" products={mainProducts?.slice(0, 10)} />
+        <ProjectsSection heading={t("projects")} products={mainProducts?.slice(0, 10)} />
         <ClientsSection />
         <Map />
         </>
