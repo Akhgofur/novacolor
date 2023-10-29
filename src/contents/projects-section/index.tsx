@@ -11,23 +11,22 @@ import "swiper/css/scrollbar";
 import { FC } from "react";
 import NewsCard from "@/components/news-card";
 import ProductCard from "@/components/product-card";
+import { IProductItem } from "@/utils/types";
+import { useRouter } from "next/router";
 
-export interface IProduct {
-  name: string;
-  description: string;
-  image: string;
-  id: number;
-}
 
 interface SliderSectionProps {
   heading: string;
-  products?: IProduct[];
+  products?: IProductItem[];
 }
 
 const ProjectsSection: FC<SliderSectionProps> = ({
   heading,
   products,
 }) => {
+
+  
+  const {locale} = useRouter()
   return (
     <section className="py-[40px] md:py-[70px]">
       <Container>
@@ -64,7 +63,7 @@ const ProjectsSection: FC<SliderSectionProps> = ({
           >
             {products?.map((el) => (
                   <SwiperSlide className="py-5" key={el.id}>
-                    <ProductCard className={"h-[260px]"}  data={el} key={el.id} />
+                    <ProductCard locale={locale} className={"h-[260px]"}  data={el} key={el.id} />
                   </SwiperSlide>
                 ))}
           </Swiper>

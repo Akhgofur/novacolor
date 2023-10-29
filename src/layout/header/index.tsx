@@ -1,10 +1,9 @@
 import Container from "@/components/container";
 import MobileNav from "@/components/mobilenav";
 import { languages, mainInfo, navData, socialLinks } from "@/utils/consts";
-import { INavItem } from "@/utils/types";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { FC, useState, useMemo, useEffect } from "react";
+import { FC, useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
 const Header: FC = () => {
@@ -138,7 +137,7 @@ const Header: FC = () => {
                 <div className="flex items-center gap-3">
                   {
                     socialLinks.map(item => (
-                      <Link href={item.url} target="_blank" key={item.id} className="flex items-center justify-center w-[35px] h-[35px] rounded-full bg-[#f6f2eb]">
+                      <Link href={item.url} target="_blank" key={item.id} className="flex hover:bg-mainBrown transition-all duration-500 items-center justify-center w-[35px] h-[35px] rounded-full bg-[#f6f2eb]">
                         <img src={item.image} alt="" className="w-[50%] h-[50%] object-contain" />
                       </Link>
                     ))
@@ -199,7 +198,7 @@ const Header: FC = () => {
                   <span className="block font-semibold">{lang.name}</span>
                 </div>
                 <span
-                  className={`hidden md:block max-w-0  w-full group-hover:max-w-full h-[2px] bg-white transition-all duration-500`}
+                  className={`hidden md:block max-w-0  w-full group-hover:max-w-full h-[2px] bg-mainBrown transition-all duration-500`}
                 ></span>
               </button>
               <button

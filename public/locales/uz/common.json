@@ -33,7 +33,12 @@
     "send" : "Yuborish",
     "address" : "Manzil",
     "projects" : "Loyihalar",
-    "close" : "Yopish"
+    "close" : "Yopish",
+    "ci-1-desc" : "Novacolor 1982 yilda Italiyaning eng samarali mintaqalaridan birining markazida joylashgan ...",
+    "ci-2-desc" : "Massiv Qiyot, Yunusobod, Toshkent",
+    "contact-subhead" : "Biz bilan bog'laning",
+    "contact-head" : "Bizga xabar qoldiring",
+    "message" : "Xabar"
 
 
 }

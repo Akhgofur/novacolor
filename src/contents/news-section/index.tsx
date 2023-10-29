@@ -12,6 +12,8 @@ import { FC, useState } from "react";
 import NewsCard from "@/components/news-card";
 import ProductCard from "@/components/product-card";
 import NewsModal from "@/components/news-modal";
+import { IProductItem } from "@/utils/types";
+import { useRouter } from "next/router";
 
 export interface INews {
   date: string;
@@ -21,18 +23,12 @@ export interface INews {
   description: string;
 }
 
-export interface IProduct {
-  name: string;
-  description: string;
-  image: string;
-  id: number;
-}
 
 interface SliderSectionProps {
   news?: INews[];
   type: string;
   heading: string;
-  products?: IProduct[];
+  products?: IProductItem[];
 }
 
 const SliderSection: FC<SliderSectionProps> = ({
@@ -45,6 +41,7 @@ const SliderSection: FC<SliderSectionProps> = ({
   
   const [currentNews, setCurrentNews] = useState(null)
   const [open, setOpen] = useState(false)
+  const {locale} = useRouter()
 
   return (
     <section className="py-[40px] md:py-[70px]">
@@ -83,7 +80,7 @@ const SliderSection: FC<SliderSectionProps> = ({
                 ))
               : products?.map((el) => (
                   <SwiperSlide className="py-5" key={el.id}>
-                    <ProductCard className="h-[400px]" data={el} key={el.id} />
+                    <ProductCard locale={locale} className="h-[400px]" data={el} key={el.id} />
                   </SwiperSlide>
                 ))}
           </Swiper>

@@ -1,6 +1,6 @@
 import Container from "@/components/container";
 import Input from "@/components/input";
-import { navData, productsData, socialLinks } from "@/utils/consts";
+import { mainProducts, navData, socialLinks } from "@/utils/consts";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
 
@@ -47,9 +47,9 @@ const Footer = () => {
               {t("products")}
             </p>
             <div className="flex flex-col gap-[6px]">
-              {productsData?.slice(0, 5).map((item) => (
+              {mainProducts?.slice(0, 5).map((item) => (
                 <Link key={item.id} className="text-base" href={"#"}>
-                  {t(item.name)}
+                  {item.name}
                 </Link>
               ))}
             </div>
