@@ -1,6 +1,7 @@
 import Container from "@/components/container";
 import Heading from "@/components/heading";
 import { categories } from "@/utils/consts";
+import Image from "next/image";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
 
@@ -18,7 +19,9 @@ const CategoriesSection = () => {
           {categories.map((item) => (
             <div key={item.id} className="flex flex-col items-center p-3 group">
               <Link href={`/category/${item.id}`} className="block w-full h-[100px] p-4">
-                <img
+                <Image
+                width={300}
+                height={300}
                   src={item.icon}
                   alt=""
                   className="w-full group-hover:scale-[1.2] transition-all duration-500 h-full  object-contain object-center mb-4"

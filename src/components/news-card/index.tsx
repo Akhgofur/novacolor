@@ -1,6 +1,7 @@
 import { INews } from "@/contents/news-section";
 import {useTranslation} from "react-i18next"
 import {FC} from "react"
+import Image from "next/image";
 
 interface NewsCardProps {
   data: INews,
@@ -12,7 +13,9 @@ interface NewsCardProps {
 const NewsCard: FC<NewsCardProps> = ({ data, setNews, setOpen  }) => {
   return (
     <div className="w-full h-[400px] rounded-lg overflow-hidden relative group">
-      <img
+      <Image
+      width={400}
+      height={400}
         src={data.image}
         alt=""
         className="z-[1] absolute w-full h-full top-0 left-0 object-cover group-hover:scale-[1.2] transition-all duration-500"

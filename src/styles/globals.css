@@ -61,5 +61,5 @@ img {
 }
 
 .anime {
-  animation: loading 1s ease-in-out infinite;
+  animation: loading 2s ease-in-out infinite;
 }

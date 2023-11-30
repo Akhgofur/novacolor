@@ -7,6 +7,7 @@ import { useTranslation } from "react-i18next";
 const Footer = () => {
   const { t } = useTranslation();
 
+
   return (
     <footer className="py-[30px] md:py-[60px] bg-mainBlack text-white">
       <Container>
@@ -48,7 +49,7 @@ const Footer = () => {
             </p>
             <div className="flex flex-col gap-[6px]">
               {mainProducts?.slice(0, 5).map((item) => (
-                <Link key={item.id} className="text-base" href={"#"}>
+                <Link key={item.id} className="text-base" href={`/product/${item?.id}`}>
                   {item.name}
                 </Link>
               ))}
