@@ -51,13 +51,14 @@ const SliderSection: FC<SliderSectionProps> = ({
         <div className="">
           <Swiper
             grabCursor={true}
-            modules={[Navigation, Autoplay]}
+            modules={[Navigation, Autoplay, Pagination]}
             // navigation={{
             //   prevEl: ".prev",
             //   nextEl: ".next",
             // }}
             speed={600}
             spaceBetween={20}
+            pagination={{clickable: true}}
             breakpoints={{
               0: {
                 slidesPerView: 1,
@@ -75,12 +76,16 @@ const SliderSection: FC<SliderSectionProps> = ({
             {type == "news"
               ? news?.map((el) => (
                   <SwiperSlide className="py-5" key={el.id}>
-                    <NewsCard setOpen={setOpen} setNews={setCurrentNews} data={el} key={el.id} />
+                   <div className="py-5">
+                     <NewsCard setOpen={setOpen} setNews={setCurrentNews} data={el} key={el.id} />
+                   </div>
                   </SwiperSlide>
                 ))
               : products?.map((el) => (
                   <SwiperSlide className="py-5" key={el.id}>
-                    <ProductCard locale={locale} className="h-[400px]" data={el} key={el.id} />
+                   <div className="py-5">
+                     <ProductCard locale={locale} className="h-[400px]" data={el} key={el.id} />
+                   </div>
                   </SwiperSlide>
                 ))}
           </Swiper>

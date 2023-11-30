@@ -34,11 +34,12 @@ const ProjectsSection: FC<SliderSectionProps> = ({
         <div className="">
           <Swiper
             grabCursor={true}
-            modules={[Navigation, Autoplay]}
+            modules={[Navigation, Autoplay, Pagination]}
             // navigation={{
             //   prevEl: ".prev",
             //   nextEl: ".next",
             // }}
+            pagination={{clickable: true}}
             speed={600}
             spaceBetween={10}
             breakpoints={{
@@ -63,7 +64,9 @@ const ProjectsSection: FC<SliderSectionProps> = ({
           >
             {products?.map((el) => (
                   <SwiperSlide className="py-5" key={el.id}>
-                    <ProductCard locale={locale} className={"h-[260px]"}  data={el} key={el.id} />
+                   <div className="py-5">
+                   <ProductCard locale={locale} className={"h-[260px]"}  data={el} key={el.id} />
+                   </div>
                   </SwiperSlide>
                 ))}
           </Swiper>
