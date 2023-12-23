@@ -3,7 +3,7 @@ import Header from "./header"
 import Footer from "./footer"
 
 interface LayoutProps {
-    children : ReactNode
+    children ?: ReactNode
 }
 
 const Layout: FC<LayoutProps> = ({children}) => {
