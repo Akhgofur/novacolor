@@ -16,6 +16,7 @@ const NovacolorSection = () => {
           <Heading className="mb-5">{t("hero-heading")}</Heading>
         </div>
         <img
+        loading='lazy'
           src="/img/products/calce-3.jpg"
           alt=""
           className="w-full md:w-1/2 h-[500px] object-contain"

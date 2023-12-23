@@ -41,7 +41,7 @@ const ImageGallery:FC<ImageGalleryProps> = ({data, currentId, open, setOpen, set
                 {
                     data?.map(item => (
                         <div key={item.id} className={`w-full h-full ${item.id == currentId ? "block" : "hidden"}`}>
-                            <Image alt="" width={500} height={600} src={item.image} className="w-full h-full object-contain object-center" />
+                            <Image alt="" loading="lazy" width={500} height={600} src={item.image} className="w-full h-full object-contain object-center" />
                         </div>
                     ))
                 }

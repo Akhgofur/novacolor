@@ -18,6 +18,7 @@ const NewsCard: FC<NewsCardProps> = ({ data, setNews, setOpen  }) => {
       height={400}
         src={data.image}
         alt=""
+        loading="lazy"
         className="z-[1] absolute w-full h-full top-0 left-0 object-cover group-hover:scale-[1.2] transition-all duration-500"
       />
       <div className="absolute  p-2 w-[80%] left-[50%] bottom-0 translate-x-[-50%] rounded-t-lg bg-white z-[3]">

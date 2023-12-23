@@ -22,6 +22,7 @@ const AboutSection = ({ extraDescription }: { extraDescription?: string }) => {
             )}
           </div>
           <img
+          loading="lazy"
             src="/img/about.png"
             alt=""
             className="w-full md:w-1/2 h-[500px] object-contain"

@@ -23,7 +23,7 @@ const ClientsSection = () => {
                     {
                         clients?.map(item => (
                             <div key={item} className="sm:p-3">
-                                <Image src={item} alt="clients" key={item} width={300} height={300} className="w-full h-[150px] object-contain object-center hover:scale-[1.2] transition-all duration-500" />
+                                <Image loading="lazy" src={item} alt="clients" key={item} width={300} height={300} className="w-full h-[150px] object-contain object-center hover:scale-[1.2] transition-all duration-500" />
                             </div>
                         ))
                     }

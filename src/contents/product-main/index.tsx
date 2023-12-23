@@ -25,6 +25,7 @@ const ProductMain: FC<ProductMainProps> = ({ data }) => {
             src={data?.image}
             width={1000}
             height={1000}
+            loading="lazy"
             className="block w-full h-auto rounded-lg  "
           />
         </div>
@@ -48,6 +49,7 @@ const ProductMain: FC<ProductMainProps> = ({ data }) => {
                 key={item.id}
                 alt=""
                 width={400}
+                loading="lazy"
                 height={400}
                 className="w-full h-auto object-contain"
               />

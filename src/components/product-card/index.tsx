@@ -14,7 +14,7 @@ const ProductCard: FC<{data: IProductItem, className ?: string, locale : string 
     return (
         <div style={{perspective: "1000px"}} className={`product-card w-full  rounded-lg  overflow-hidden relative group ${className}`}>
             <div  className="z-[2] w-full max-w-0 group-hover:max-w-full h-full absolute top-0 left-[50%] translate-x-[-50%] transition-all duration-500 bg-gradient-to-b from-transparent to-mainBrown"></div>
-            <Image src={data.image} alt={data.name} width={400} height={400} className="absolute z-[1] w-full h-full top-0 left-0 object-cover"></Image>
+            <Image loading="lazy" src={data.image} alt={data.name} width={400} height={400} className="absolute z-[1] w-full h-full top-0 left-0 object-cover"></Image>
             <div className="product-card-content absolute z-[3] bottom-0 left-0  w-full py-5 opacity-0 group-hover:opacity-100">
                 <div className="px-4 flex flex-col items-center">
                 <p className="font-semibold text-white text-xl text-center mb-4">{t(data.name)}</p>
