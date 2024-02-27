@@ -15,7 +15,7 @@ const Stats = () => {
                         statsData.map((item, index: number) => (
                             <div key={item.id} className="flex flex-col gap-3 items-center">
                                 {/* <p className="text-[55px] font-bold text-white">{item.number + (index > 0 ? "+" : "")}</p> */}
-                                <p className="text-[55px] font-bold text-white"><CountUp separator=" "  enableScrollSpy scrollSpyOnce end={item.number} duration={3}  />{(index > 0 ? "+" : "")}</p>
+                                <p className="text-[55px] font-bold text-white"><CountUp separator=""  enableScrollSpy scrollSpyOnce end={item.number} duration={3}  />{(index > 0 ? "+" : "")}</p>
                                 <p className="text-base font-medium text-[#a4a097]">{t(item.name)}</p>
                             </div>
                         ))
