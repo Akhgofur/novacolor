@@ -113,7 +113,7 @@ const navData: INavItem[] = [
         id: 1,
         name: "phone",
         image: "/img/phone.png",
-        value: "998 (97) 422 22 77",
+        value: "+998 (97) 422 22 77",
         url: "tel:998974222277"
 
     },
@@ -164,7 +164,7 @@ const navData: INavItem[] = [
     {
         id: 3,
         name: "contact",
-        description : "<a  href='mailto:info@gmail.com' >info@gmail.com</a> </br> <a  href='tel:+998998934461' >+998 (99) 893 44 61</a>",
+        description : "<a  href='mailto:info@gmail.com' >info@gmail.com</a> </br> <a  href='tel:+998974222277' >+998 (97) 422 22 77</a>",
         image: "/img/contact-3.png",
     },
     
