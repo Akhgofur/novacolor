@@ -113,8 +113,8 @@ const navData: INavItem[] = [
         id: 1,
         name: "phone",
         image: "/img/phone.png",
-        value: "998998934461",
-        url: "tel:998998934461"
+        value: "998 (97) 422 22 77",
+        url: "tel:998974222277"
 
     },
     {
